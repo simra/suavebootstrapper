@@ -1,15 +1,15 @@
-// --------------------------------------------------------------------------------------
-// FAKE build script
-// --------------------------------------------------------------------------------------
-
-#r @"packages/FAKE/tools/FakeLib.dll"
+#r "packages/FAKE/tools/FakeLib.dll"
 
 open Fake
 
+// Values
+let solutionFile = "TodoBackendSuave.sln"
 
-// --------------------------------------------------------------------------------------
-// Run all targets by default. Invoke 'build <Target>' to override
+//Targets
+Target "Default" (fun _ -> 
+  !!solutionFile
+  |> MSBuildRelease "" "Build"
+  |> ignore)
 
-Target "All" DoNothing
-
-RunTargetOrDefault "All"
+// start build
+RunTargetOrDefault "Default"
