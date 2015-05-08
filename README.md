@@ -4,6 +4,8 @@
 
 This repository shows how to use [FAKE](https://github.com/fsharp/FAKE), [Paket](https://github.com/fsprojects/Paket) and [KuduSync](https://github.com/projectkudu/KuduSync) to deploy a [suave.io](http://suave.io/) website to Azure.
 
+Originally cloned from @shanselman's template. This project attempts to merge in the Todo backend build by Jon Canning.  The original repo is here:  https://github.com/JonCanning/TodoBackendSuave
+
 ## Getting started
 
 * Go to http://azure.microsoft.com/ and create an Azure account
